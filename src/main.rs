@@ -1,11 +1,9 @@
 fn sum_with_missing(numbers: Vec<Option<i32>>) -> i32 {
-    todo!();
+    numbers.iter().fold(0, |sum, x| sum + x.unwrap_or(0))
 }
-
 fn main() {
     println!("");
 }
-
 
 #[test]
 fn empty() {
